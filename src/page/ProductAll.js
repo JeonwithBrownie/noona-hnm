@@ -9,7 +9,7 @@ const ProductAll = () => {
   const getProducts = async () => {
     let searchQuery = query.get("q") || ""; // q라고 시작되는 것에 item을 가져온다. 없는 경우에는 디폴트 빈스트링
     console.log("search query :", searchQuery);
-    let url = `https://my-json-server.typicode.com/<JeonwithBrownie>/<noona-hnm>/products?q=${searchQuery}`;
+    let url = `https://my-json-server.typicode.com/JeonwithBrownie/noona-hnm/products?q=${searchQuery}`;
     let response = await fetch(url);
     let data = await response.json();
     setProductList(data);
